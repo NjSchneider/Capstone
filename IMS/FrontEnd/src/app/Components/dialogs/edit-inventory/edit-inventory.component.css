@@ -1,0 +1,14 @@
+.form{
+    width: 100%;
+}
+
+.form mat-form-field{
+    display: inline-block;
+    padding-left: 50px;
+}
+
+
+.buttons{
+    width: 40%; 
+    margin: auto;
+}

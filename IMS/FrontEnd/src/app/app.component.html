@@ -1,0 +1,48 @@
+<mat-toolbar class="toolbar" *ngIf="loggedIn == 'true'" >
+  <mat-toolbar-row>    
+    <span>
+      <button mat-button class="sidenavBtn" (click)="drawer.toggle()" >
+        <mat-icon>dehaze</mat-icon>
+      </button>
+    </span>
+    <span>Game World</span>
+    <img src="../assets/icon5.ico">
+    <span class="filler"></span>
+    <span class="filler"></span>    
+      <mat-icon class="personIcon">person</mat-icon><span>&nbsp; {{username}} &nbsp;</span>
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>keyboard_arrow_down</mat-icon> </button>
+      <mat-menu #menu="matMenu">
+        <button *ngIf="level === 'master'" mat-menu-item [routerLink]="'/settings'">Settings</button>
+        <button mat-menu-item (click)="drawer.toggle(); logout()">Logout</button>
+      </mat-menu>    
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar color="primary" class="toolbar" *ngIf="loggedIn != 'true'" >
+  <mat-toolbar-row>
+    <span>Game World</span>
+    <img src="../assets/icon5.ico" id="icon">
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="dashContainer" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+      <mat-nav-list #sidenav>
+        <a mat-list-item class="sideNavItem" [routerLink]="'/buy-sell'"> <mat-icon class="sidebarIcons">shopping_cart</mat-icon> Buy/Sell </a>
+        <a mat-list-item class="sideNavItem" [routerLink]="'/inventory'"> <mat-icon class="sidebarIcons">store</mat-icon>  Inventory </a>
+        <a *ngIf="level === 'master'" class="sideNavItem" mat-list-item [routerLink]="'/data'"> <mat-icon class="sidebarIcons">trending_up</mat-icon> Data </a>
+        <a mat-list-item class="sideNavItem" [routerLink]="'/price-charting'"> <mat-icon class="sidebarIcons">sports_esports</mat-icon>  Price Charting </a>
+        <a mat-list-item class="sideNavItem" (click)="drawer.toggle()"> <mat-icon class="sidebarIcons">clear</mat-icon>  Close</a>
+      </mat-nav-list>
+  </mat-drawer>
+  <div>    
+    <main>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </main> 
+  </div>
+</mat-drawer-container>
+
+
+ 

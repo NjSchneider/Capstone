@@ -1,0 +1,26 @@
+<div class="loginCardContainer">
+<mat-card >
+<mat-card-header class="login">
+    <mat-card-title>
+        Login <mat-icon class="loginIcon">lock</mat-icon>
+    </mat-card-title>
+</mat-card-header>
+<mat-card-content>
+    <form class='login-form'>
+        <mat-form-field class="loginField">
+            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            <mat-error *ngIf="hasError('username', 'required')">Password required</mat-error>
+            <mat-hint *ngIf="incorrectUsername" class="error">Incorrect username</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="loginField">
+            <input matInput id="password" type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+            <mat-error *ngIf="hasError('password', 'required')">Password required</mat-error>             
+            <mat-hint *ngIf="incorrectPassword" class="error">Incorrect password</mat-hint>           
+        </mat-form-field>
+    </form>
+</mat-card-content>
+<mat-card-actions>
+    <button mat-raised-button color="primary" id="loginSubmit" (click)="login(username, password)">Login</button>
+</mat-card-actions>
+</mat-card>
+</div>

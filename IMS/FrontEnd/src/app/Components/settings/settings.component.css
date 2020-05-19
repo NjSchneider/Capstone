@@ -1,0 +1,38 @@
+mat-form-field{
+    margin:8px;
+}
+
+mat-card{
+    margin:60px;
+    padding: 40px;
+}
+
+mat-list-item{
+    margin:16px;
+}
+#deleteUserBtn{
+    background-color: rgb(151, 0, 0) !important;
+    margin-left: 3px;
+}
+.usersTable {
+    width:75%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.full-width-table {
+    width: 100%;
+  }
+  .mat-elevation-z8 {
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 10px;
+  }
+  .search {
+    width: 25%;
+    display: block;
+    
+    margin-right: auto;
+  }
+  

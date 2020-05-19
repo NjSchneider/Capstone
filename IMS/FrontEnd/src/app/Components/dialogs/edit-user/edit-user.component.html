@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Edit User</h1>
+<div mat-dialog-content>
+    <form class='form'>
+        <mat-form-field>
+            <mat-label>User ID</mat-label>
+            <input matInput value="{{id}}" name="id" required disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput id="username" [(ngModel)]="user.username" type="text" name="username" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput id="password" [(ngModel)]="user.password" type="password" name="password" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>User Level</mat-label>
+            <mat-select id="level" [(ngModel)]="user.level" name="level" required>
+                <mat-option value="master">Master</mat-option>
+                <mat-option value="manager">Manager</mat-option>
+                <mat-option value="employee">Employee</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+<div class="buttons" mat-dialog-actions>
+  <button mat-raised-button (click)="close()">Cancel</button> 
+  <button mat-raised-button (click)="updateEmployee(user)">Update</button>
+</div>

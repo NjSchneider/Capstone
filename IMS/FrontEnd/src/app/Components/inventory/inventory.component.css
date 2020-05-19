@@ -1,0 +1,25 @@
+.mat-elevation-z8 {
+  margin-top: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 10px;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search mat-form-field{
+  padding-left: 20px;
+}
+
+.search button{
+  margin-left: 10px;
+}

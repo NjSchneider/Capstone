@@ -1,0 +1,86 @@
+.chartsCardContainer{
+    display: flex;
+    align-items: flex-start;
+    margin-left:16px;
+    margin-right:16px;
+    margin-top:32px;
+    margin-bottom:8px;
+    padding: 0 16px;
+    max-width: 90%;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    
+  }
+  /* .chartsCard{
+   
+    } */
+
+    button{
+        margin: 8px;
+    }
+
+    .infoCardContainer{
+        display: flex;
+        align-items: flex-start;
+        margin: 32px 8px;
+        padding: 16px;       
+        max-width: 80%;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+    .infoCard{
+        min-width:25%;
+        margin:8px;       
+    }
+
+    .infoCardContent{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .infoFooter{        
+        margin:8px;
+    }
+
+    .detailsCard{
+        /* max-width: 40%; */
+        margin:8px;
+        flex-grow: 1;
+        flex-shrink:1;
+    }
+    .detailsContainer{
+        display: flex;
+        align-items: flex-start;
+        margin: 32px 16px;
+        padding: 0 16px;
+        /* max-width: 90%; */
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+
+.salesData{
+    width: 100%;
+}
+
+.detailsCard{
+    min-height: 35vh !important;
+}
+
+.moneyIcon {
+    margin-right: 4px;
+    position: relative;
+    top: 3.5px;
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
